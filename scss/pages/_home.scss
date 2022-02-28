@@ -1,0 +1,308 @@
+.wrapper-body{
+  position: relative;
+}
+#more, #more2 {display: none;}
+#myBtn, #myBtn2{
+  background: transparent;
+  color: #fff;
+  border: none;
+  position: relative;
+  border-bottom: 1px solid #fff;
+  padding: 5px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  font-weight: bold;
+  &:hover{
+    background: #fff;
+    color: $c-default;
+  }
+ 
+}
+
+
+//SITE BANNER
+.site-banner {
+  width: 100vw;
+  position: relative;
+  // min-height: 90vh;
+  .banner-img{
+    figure{
+      margin: 0;
+      position: relative;
+      &::after{
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(#000, 0.2);
+      }
+      img{
+        height: 60vh;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .banner-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    .heading{
+      font-weight: bold;
+      color: #fff;
+      white-space: nowrap;
+      text-shadow: rgba(#000, 0.3) 0px 5px 0px;
+    }
+    @include Responsive (PHONE){
+      width: 100%;
+      padding: 0 2rem;
+      text-align: center;
+      .heading{
+      white-space:normal;
+      }
+    }
+}
+
+}
+
+.down-infinite{
+  animation: UpDown 1s linear infinite;
+  position: absolute;
+  left: 50%;
+  bottom: -4rem;
+  font-size: 3rem;
+  cursor: pointer;
+  color: #715c3f;
+  transform: translate(-50%, -100%) ;
+  -webkit-transform: translate(-50%, -100%) ;
+  -moz-transform: translate(-50%, -100%) ;
+  -ms-transform: translate(-50%, -100%) ;
+  -o-transform: translate(-50%, -100%) ;
+    a
+{
+    color: $c-default;
+  }
+}
+
+.button-prev{
+  position: absolute;
+  left: 4vw;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 24px;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba($c-default, 0.4);
+  padding: 6px 1.4rem;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+    i{
+    color: #fff;
+    margin-right: 3px;
+  }
+  &:hover{
+    background: $c-default;
+  }
+
+}
+.button-next{
+  position: absolute;
+  right: 4vw;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 24px;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba($c-default, 0.4);
+  padding: 6px 1.4rem;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  i{
+    color: #fff;
+    margin-left: 3px;
+  }
+  &:hover{
+    background: $c-default;
+  }
+
+}
+
+//section description
+
+.section-description{
+  .description-inner{
+    max-width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.8rem;
+    @include Responsive (IPAD){
+      max-width: 80%;
+      font-size: 1.6rem;
+    }
+    @include Responsive (PHONE){
+      max-width: 100%;
+      font-size: 1.6rem;
+    }
+  }
+}
+//section content
+
+.section-content{
+  .content-item{
+    &__wrapper{
+      background: $c-default;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      figure{
+        margin: 0;
+        @include Responsive (IPAD){
+          img{
+            height: 40rem;
+          }
+        }
+        @include Responsive (PHONE){
+          img{
+            height: auto;
+          }
+        }
+      }
+    }
+    &__main{
+     
+      width: 60%;
+      font-size: 2.2rem;
+      color: #fff;
+      @include Responsive (IPADPRO){
+        padding: 2rem 3rem;
+        width: 70%;
+        font-size: 1.6rem;
+      }
+      @include Responsive (IPAD){
+        width: 100%;
+        font-size: 1.6rem;
+        figure{
+          img{
+            height: 40rem;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+//section condition
+
+.section-condition{
+  .section-condition__img{
+    display: flex;
+    flex-direction: column;
+    .condition-cover{
+      background: url(../../assets/images/cover-footer.webp) no-repeat center center/cover;
+        min-height: 50vh; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include Responsive (PHONE){
+        background-attachment:inherit;
+
+        }
+    }
+    span{
+      width: 100%;
+      padding: 2rem 4rem;
+    }
+  }
+  .section-condition__content{
+    max-width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 2.2rem;
+    @include Responsive (IPAD){
+      max-width: 80%;
+      font-size: 1.6rem;
+    }
+    @include Responsive (PHONE){
+      max-width: 100%;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+// SUPPORT ONLINE
+.support-online{
+  cursor: pointer;
+  position: fixed;
+  right: 3.472vw;
+  bottom: 8.8vh;
+  z-index: 101;
+  background: $c-default;
+  border: 8px solid rgba(221,111,38,0.20);
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 20px 10px 0 rgba(0,0,0,0.10);
+  border-radius: 50%;
+  padding: 10px;
+  -webkit-animation: heartbeat 1.6s ease-in-out infinite both;
+  animation: heartbeat 1.6s ease-in-out infinite both;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  text-decoration: none;
+
+  &:hover{
+    background: $c-orange;
+  }
+  &::after{
+      content: '';
+      position: absolute;
+      width: calc(100% + 10px);
+      height: calc(100% + 10px);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      border: 8px solid rgba(221,111,38,0.20);
+      z-index: -1;
+  }
+  img{
+      -webkit-animation: ping 1s ease-in-out infinite both;
+      animation: ping 1s ease-in-out infinite both;
+      height: 28px;
+      width: 28px;
+  }
+}

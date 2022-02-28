@@ -1,0 +1,10 @@
+a {
+    color: $c-black;
+    &:hover {
+        text-decoration: none;
+        color: $c-orange;
+    }
+}
+b, strong{
+    font-weight: bold;
+}
